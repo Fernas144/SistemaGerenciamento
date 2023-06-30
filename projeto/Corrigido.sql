@@ -24,6 +24,7 @@ create table Tarefas(
     responsavel int
 );
 
+alter table colaboradores add arquivo varchar(255);
 alter table Projetos add constraint fk_responsavel_G foreign key (responsavel) references Colaboradores (id);
 alter table Tarefas add constraint fk_projetos foreign key (projeto) references Projetos(id);
 alter table Tarefas add constraint fk_responsavel_C foreign key (responsavel) references Colaboradores(id);
